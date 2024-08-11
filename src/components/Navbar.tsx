@@ -37,28 +37,6 @@ const Navbar = async () => {
                                         "hidden hover:bg-blue-400 hover:text-white md:flex md:items-center",
                                 })}
                             >
-                                About
-                            </Link>
-                            <Link
-                                href=""
-                                className={buttonVariants({
-                                    size: "sm",
-                                    variant: "ghost",
-                                    className:
-                                        "hidden hover:bg-blue-400 hover:text-white md:flex md:items-center",
-                                })}
-                            >
-                                Projects
-                            </Link>
-                            <Link
-                                href=""
-                                className={buttonVariants({
-                                    size: "sm",
-                                    variant: "ghost",
-                                    className:
-                                        "hidden hover:bg-blue-400 hover:text-white md:flex md:items-center",
-                                })}
-                            >
                                 CV
                             </Link>
 
@@ -80,29 +58,9 @@ const Navbar = async () => {
                             <div className="md:hidden">
                                 <DropdownMenu>
                                     <DropdownMenuTrigger asChild>
-                                        <MenuIcon className="size-8 cursor-pointer" />
+                                        <MenuIcon className="mr-10 size-8 cursor-pointer" />
                                     </DropdownMenuTrigger>
-                                    <DropdownMenuContent className="flex flex-col space-y-2">
-                                        <Link
-                                            href=""
-                                            className={buttonVariants({
-                                                size: "sm",
-                                                variant: "ghost",
-                                                className: "",
-                                            })}
-                                        >
-                                            About
-                                        </Link>
-                                        <Link
-                                            href=""
-                                            className={buttonVariants({
-                                                size: "sm",
-                                                variant: "ghost",
-                                                className: "",
-                                            })}
-                                        >
-                                            Projects
-                                        </Link>
+                                    <DropdownMenuContent className="flex flex-col space-y-2 border-primary bg-stone-400 py-5">
                                         <Link
                                             href=""
                                             className={buttonVariants({
