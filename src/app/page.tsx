@@ -2,6 +2,7 @@ import { DownloadIcon } from "lucide-react"
 import HorizontalRule from "~/components/HorizontalRule"
 import MaxWidthWrapper from "~/components/MaxWidthWrapper"
 import { Button, buttonVariants } from "~/components/ui/button"
+import { TextEffect } from "~/components/ui/TextEffect"
 
 const Arrow = (
     <svg
@@ -65,57 +66,82 @@ const Arrow = (
 
 const HomePage = () => {
     return (
-        <div className="min-h-screen w-full bg-stone-900 text-white">
-            <MaxWidthWrapper className="relative mt-20 flex flex-col">
-                <h2 className="text-xl tracking-tight">
-                    {"Hello! I'm James :)"}
-                </h2>
-                <h1 className="mt-10 text-4xl font-semibold tracking-tight md:text-5xl">
-                    {"Software Developer"}
-                </h1>
+        <div className="w-full bg-stone-900 text-white">
+            <MaxWidthWrapper>
+                <section className="mt-20 flex min-h-[calc(100vh-8.5rem)] flex-col justify-between">
+                    <div className="relative pt-32">
+                        <TextEffect
+                            per="char"
+                            preset="scale"
+                            className="text-xl tracking-tight"
+                        >
+                            {"Hello! I'm James :)"}
+                        </TextEffect>
 
-                <div className="my-10 space-y-2">
-                    <p className="text-sm tracking-tight lg:max-w-[50%]">
-                        {
-                            "I live in New Zealand and I've been working as a business consultant for more than 3 years."
-                        }
-                    </p>
-                    <p className="text-sm tracking-tight lg:max-w-[50%]">
-                        {
-                            "I have decided to focus my career efforts back towards my passion in Software Development."
-                        }
-                    </p>
-                    <p className="text-sm tracking-tight lg:max-w-[50%]">
-                        {
-                            "My experience may not be commercial, but please check out my self-driven learning and projects below. :)"
-                        }
-                    </p>
-                </div>
+                        <TextEffect
+                            as="h1"
+                            per="char"
+                            preset="fade"
+                            className="mt-10 text-4xl font-semibold tracking-tight md:text-5xl"
+                        >
+                            {"Software Developer"}
+                        </TextEffect>
 
-                <div className="hidden lg:block">
-                    <p className="absolute right-[30%] top-0">
-                        {"My cat twig"}
-                    </p>
-                    <div className="absolute right-[30%] top-10 -rotate-45">
-                        {Arrow}
+                        <TextEffect
+                            as="p"
+                            per="word"
+                            preset="slide"
+                            className="my-10 space-y-2 lg:max-w-[50%]"
+                        >
+                            {
+                                "I live in New Zealand and I've been working as a business consultant for more than 3 years. I have decided to focus my career efforts back towards my passion in Software Development. My experience may not be commercial, but please check out my self-driven learning and projects below. :)"
+                            }
+                        </TextEffect>
+
+                        <div className="absolute right-0 top-0 z-50 hidden h-96 w-[30rem] pt-32 lg:block">
+                            <div className="relative">
+                                <TextEffect
+                                    as="p"
+                                    per="word"
+                                    preset="slide"
+                                    className="absolute left-10 top-0"
+                                >
+                                    {"My cat twig"}
+                                </TextEffect>
+                                <div className="animate-fade absolute left-10 top-10 -rotate-45">
+                                    {Arrow}
+                                </div>
+                                <img
+                                    className="animate-fade absolute right-20 top-20 max-h-64"
+                                    src="/twig.png"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="animate-fade mt-20 flex items-center justify-center space-x-5 pt-10">
+                            <Button variant={"default"}>Contact me</Button>
+                            <Button
+                                variant={"ghost"}
+                                className="text-zinc-400 hover:bg-stone-900 hover:text-white"
+                            >
+                                Download CV{" "}
+                                <DownloadIcon className="ml-2 size-5" />
+                            </Button>
+                        </div>
                     </div>
-                    <img
-                        className="absolute right-[12%] top-[15%] max-h-64"
-                        src="/twig.png"
-                    />
-                </div>
 
-                <div className="my-10 flex items-center justify-center space-x-5">
-                    <Button variant={"default"}>Contact me</Button>
-                    <Button
-                        variant={"ghost"}
-                        className="text-zinc-400 hover:bg-stone-900 hover:text-white"
-                    >
-                        Download CV <DownloadIcon className="ml-2 size-5" />
-                    </Button>
-                </div>
+                    <HorizontalRule chevronIcon="down" className="mt-[15%]" />
+                </section>
 
-                <HorizontalRule />
+                <section className="mt-20 flex min-h-[100vh] flex-col justify-center">
+                    <div className="size-52 bg-red-500"></div>
+                </section>
+                <section className="mt-20 flex min-h-[100vh] flex-col justify-center">
+                    <div className="size-52 bg-red-500"></div>
+                </section>
+                <section className="mt-20 flex min-h-[100vh] flex-col justify-center">
+                    <div className="size-52 bg-red-500"></div>
+                </section>
             </MaxWidthWrapper>
         </div>
     )
