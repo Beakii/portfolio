@@ -1,7 +1,7 @@
 "use server"
 import Link from "next/link"
 import MaxWidthWrapper from "./MaxWidthWrapper"
-import { ArrowRight, MenuIcon } from "lucide-react"
+import { ArrowRight, DownloadIcon, MailIcon, MenuIcon } from "lucide-react"
 import { buttonVariants } from "./ui/button"
 import {
     DropdownMenu,
@@ -38,6 +38,7 @@ const Navbar = async () => {
                                 })}
                             >
                                 CV
+                                <DownloadIcon className="ml-2 size-4" />
                             </Link>
 
                             <div className="hidden h-8 w-px bg-primary md:block" />
@@ -52,7 +53,7 @@ const Navbar = async () => {
                                 })}
                             >
                                 Contact
-                                <ArrowRight className="ml-1.5 h-5 w-5" />
+                                <MailIcon className="ml-2 size-4" />
                             </Link>
 
                             <div className="md:hidden">
@@ -70,6 +71,7 @@ const Navbar = async () => {
                                             })}
                                         >
                                             CV
+                                            <DownloadIcon className="ml-2 size-4" />
                                         </Link>
                                         <Link
                                             href=""
