@@ -1,7 +1,7 @@
 "use server"
 import Link from "next/link"
 import MaxWidthWrapper from "./MaxWidthWrapper"
-import { ArrowRight, DownloadIcon, MailIcon, MenuIcon } from "lucide-react"
+import { DownloadIcon, MailIcon, MenuIcon } from "lucide-react"
 import { buttonVariants } from "./ui/button"
 import {
     DropdownMenu,

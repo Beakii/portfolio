@@ -1,13 +1,11 @@
 "use client"
 import React, { useEffect, useState, useRef } from "react"
+import type { SpringOptions, Transition, Variant } from "framer-motion"
 import {
     motion,
-    SpringOptions,
     useMotionValue,
     useSpring,
     AnimatePresence,
-    Transition,
-    Variant,
 } from "framer-motion"
 import { cn } from "~/lib/utils"
 
@@ -63,8 +61,8 @@ export function Cursor({
         }
     }, [cursorX, cursorY, onPositionChange])
 
-    const cursorXSpring = useSpring(cursorX, springConfig || { duration: 0 })
-    const cursorYSpring = useSpring(cursorY, springConfig || { duration: 0 })
+    const cursorXSpring = useSpring(cursorX, springConfig ?? { duration: 0 })
+    const cursorYSpring = useSpring(cursorY, springConfig ?? { duration: 0 })
 
     useEffect(() => {
         const handleVisibilityChange = (visible: boolean) => {

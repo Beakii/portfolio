@@ -1,4 +1,3 @@
-import { ScanEyeIcon } from "lucide-react"
 import Link from "next/link"
 import StackIcon from "tech-stack-icons"
 import { buttonVariants } from "~/components/ui/button"
@@ -51,7 +50,7 @@ const Project = ({
                     <div className="flex space-x-4">
                         <div>
                             <Cursor
-                                attachToParent
+                                attachToParent={true}
                                 variants={{
                                     initial: {
                                         height: 0,
@@ -77,17 +76,17 @@ const Project = ({
                             >
                                 <img
                                     src="https://i.pinimg.com/564x/4c/95/69/4c9569ab2928e5ae400a6a34e7c537a0.jpg"
-                                    alt="Christian Church, Eastern Europe"
+                                    alt="Preview image of the website"
                                     className="size-96"
                                 />
                             </Cursor>
                             <Link
+                                href={url ?? ""}
                                 className={buttonVariants({
                                     variant: "outline",
                                     className:
                                         "border-primary bg-transparent text-zinc-400 hover:cursor-pointer hover:bg-blue-400 hover:text-white",
                                 })}
-                                href={""}
                             >
                                 Visit
                             </Link>
@@ -116,7 +115,10 @@ const Project = ({
             <CardFooter>
                 <div className="flex w-full justify-evenly">
                     {technologiesUsed.map((tech, index) => (
-                        <div className="size-10 overflow-hidden rounded-full bg-zinc-700 ring-2 ring-primary">
+                        <div
+                            key={tech}
+                            className="size-10 overflow-hidden rounded-full bg-zinc-700 ring-2 ring-primary"
+                        >
                             <StackIcon className="" key={index} name={tech} />
                         </div>
                     ))}

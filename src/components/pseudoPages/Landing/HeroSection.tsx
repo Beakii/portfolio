@@ -133,6 +133,7 @@ const HeroSection = ({ className }: { className?: string }) => {
                             <img
                                 className="absolute right-20 top-20 max-h-64 animate-fade"
                                 src="/twig.png"
+                                alt="My cat Twig"
                             />
                         </div>
                     </div>
