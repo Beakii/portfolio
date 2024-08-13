@@ -11,7 +11,7 @@ import {
 
 const Navbar = async () => {
     return (
-        <nav className="sticky inset-x-0 top-0 z-[100] h-14 w-full border-b border-primary bg-stone-950/80 text-white backdrop-blur-lg transition-all">
+        <nav className="absolute inset-x-0 top-0 z-[100] h-14 w-full border-b-2 border-primary text-white backdrop-blur-lg transition-all">
             <MaxWidthWrapper>
                 <div className="flex h-14 items-center justify-between">
                     <Link href="/" className="z-40 flex font-semibold">
