@@ -4,6 +4,8 @@ import { TextEffect } from "../../ui/TextEffect"
 import HorizontalRule from "../../HorizontalRule"
 import { cn } from "~/lib/utils"
 import { InView } from "~/components/ui/InView"
+import TechStackIcon from "~/components/TechStackIcon"
+import { TECH_STACK } from "~/lib/types"
 
 const Arrow = (
     <svg
@@ -65,6 +67,27 @@ const Arrow = (
     </svg>
 )
 
+const techStackArray: TECH_STACK[] = [
+    "nextjs2",
+    "reactjs",
+    "typescript",
+    "tailwindcss",
+    "postgresql",
+    "go",
+    "shadcnui",
+    "reactquery",
+    "nodejs",
+    "nextauth",
+    "prisma",
+    "stripe",
+    "vitejs",
+    "prettier",
+    "resend",
+    "drizzle",
+    "javascript",
+    "github",
+]
+
 const HeroSection = ({ className }: { className?: string }) => {
     return (
         <section
@@ -110,12 +133,34 @@ const HeroSection = ({ className }: { className?: string }) => {
                         as="p"
                         per="word"
                         preset="slide"
-                        className="my-10 space-y-2 lg:max-w-[50%]"
+                        className="my-10 space-y-2 text-justify lg:max-w-[50%]"
                     >
                         {
                             "I live in New Zealand and I've been working as a business consultant for more than 3 years. I have decided to focus my career efforts back towards my passion in Software Development. My experience may not be commercial, but please check out my self-driven learning and projects below. :)"
                         }
                     </TextEffect>
+
+                    <TextEffect
+                        per="char"
+                        preset="scale"
+                        className="text-xl tracking-tight"
+                    >
+                        {"Tech I commonly use"}
+                    </TextEffect>
+                    <div className="grid w-full grid-cols-6 md:grid-cols-12">
+                        {techStackArray.map((tech, index) => (
+                            <div
+                                key={tech}
+                                className="m-2 size-10 overflow-hidden rounded-full bg-zinc-700 ring-2 ring-primary"
+                            >
+                                <TechStackIcon
+                                    className="hover:cursor-help hover:brightness-125"
+                                    key={index}
+                                    techUsed={tech}
+                                />
+                            </div>
+                        ))}
+                    </div>
 
                     <div className="absolute -top-[25%] right-0 z-50 hidden h-96 w-[30rem] pt-32 lg:block">
                         <div className="relative">
@@ -138,7 +183,7 @@ const HeroSection = ({ className }: { className?: string }) => {
                         </div>
                     </div>
 
-                    <div className="mt-20 flex animate-fade items-center justify-center space-x-5 pt-10">
+                    <div className="flex animate-fade items-center justify-center space-x-5 pt-10 md:mt-20">
                         <Button variant={"default"}>Contact me</Button>
                         <Button
                             variant={"ghost"}

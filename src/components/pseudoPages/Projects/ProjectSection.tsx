@@ -72,6 +72,7 @@ const ProjectSection = ({ className }: { className?: string }) => {
                         projectDescription="A twitch bot specifically for integrating with 7tv via channel point redeems."
                         technologiesUsed={[
                             "vitejs",
+                            "reactjs",
                             "tailwindcss",
                             "go",
                             "postgresql",
@@ -84,11 +85,7 @@ const ProjectSection = ({ className }: { className?: string }) => {
                     <Project
                         projectName="BeakieBot - Deprecated"
                         projectDescription="A twitch bot prototype. Currently being rewritten in React/Go."
-                        technologiesUsed={[
-                            "javascript",
-                            "nodejs",
-                            "tailwindcss",
-                        ]}
+                        technologiesUsed={["javascript", "nodejs"]}
                         isLive="not-live"
                     />
                 </div>

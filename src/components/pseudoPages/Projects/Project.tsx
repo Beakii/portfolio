@@ -10,29 +10,12 @@ import {
     CardTitle,
 } from "~/components/ui/card"
 import { Cursor } from "~/components/ui/Cursor"
+import { TECH_STACK } from "~/lib/types"
 
 interface ProjectProps {
     projectName: string
     projectDescription: string
-    technologiesUsed: Array<
-        | "nextjs2"
-        | "reactjs"
-        | "typescript"
-        | "tailwindcss"
-        | "postgresql"
-        | "go"
-        | "shadcnui"
-        | "reactquery"
-        | "nodejs"
-        | "nextauth"
-        | "prisma"
-        | "stripe"
-        | "vitejs"
-        | "prettier"
-        | "resend"
-        | "drizzle"
-        | "javascript"
-    >
+    technologiesUsed: TECH_STACK[]
     isLive: "live" | "not-live" | "in-progress"
     url?: string
     githubUrl?: string
