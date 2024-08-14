@@ -29,7 +29,8 @@ const Navbar = async () => {
                     <div className="flex h-full items-center space-x-4">
                         <>
                             <Link
-                                href=""
+                                target="_blank"
+                                href="/James-Software-CV.pdf"
                                 className={buttonVariants({
                                     size: "sm",
                                     variant: "ghost",
@@ -44,7 +45,8 @@ const Navbar = async () => {
                             <div className="hidden h-8 w-px bg-primary md:block" />
 
                             <Link
-                                href=""
+                                target="_blank"
+                                href="mailto:james@co-axiom.co.nz"
                                 className={buttonVariants({
                                     size: "sm",
                                     variant: "ghost",
@@ -63,7 +65,8 @@ const Navbar = async () => {
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent className="flex flex-col space-y-2 border-primary bg-stone-400 py-5">
                                         <Link
-                                            href=""
+                                            target="_blank"
+                                            href="/James-Software-CV.pdf"
                                             className={buttonVariants({
                                                 size: "sm",
                                                 variant: "ghost",
@@ -74,7 +77,8 @@ const Navbar = async () => {
                                             <DownloadIcon className="ml-2 size-4" />
                                         </Link>
                                         <Link
-                                            href=""
+                                            target="_blank"
+                                            href="mailto:james@co-axiom.co.nz"
                                             className={buttonVariants({
                                                 size: "sm",
                                                 variant: "default",

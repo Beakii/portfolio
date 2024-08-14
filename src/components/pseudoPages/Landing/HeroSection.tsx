@@ -1,11 +1,12 @@
 import { DownloadIcon } from "lucide-react"
-import { Button } from "../../ui/button"
+import { Button, buttonVariants } from "../../ui/button"
 import { TextEffect } from "../../ui/TextEffect"
 import HorizontalRule from "../../HorizontalRule"
 import { cn } from "~/lib/utils"
 import { InView } from "~/components/ui/InView"
 import TechStackIcon from "~/components/TechStackIcon"
 import { TECH_STACK } from "~/lib/types"
+import Link from "next/link"
 
 const Arrow = (
     <svg
@@ -184,13 +185,27 @@ const HeroSection = ({ className }: { className?: string }) => {
                     </div>
 
                     <div className="flex animate-fade items-center justify-center space-x-5 pt-10 md:mt-20">
-                        <Button variant={"default"}>Contact me</Button>
-                        <Button
-                            variant={"ghost"}
-                            className="text-zinc-400 hover:bg-stone-900 hover:text-white"
+                        <Link
+                            target="_blank"
+                            href="mailto:james@co-axiom.co.nz"
+                            className={buttonVariants({
+                                variant: "default",
+                            })}
+                        >
+                            Contact me
+                        </Link>
+                        <Link
+                            target="_blank"
+                            href="/james-Software-CV.pdf"
+                            className={cn(
+                                "text-zinc-400 hover:bg-stone-900 hover:text-white",
+                                buttonVariants({
+                                    variant: "ghost",
+                                }),
+                            )}
                         >
                             Download CV <DownloadIcon className="ml-2 size-5" />
-                        </Button>
+                        </Link>
                     </div>
                 </InView>
             </div>
