@@ -1,5 +1,5 @@
 import Link from "next/link"
-import StackIcon from "tech-stack-icons"
+import TechStackIcon from "~/components/TechStackIcon"
 import { buttonVariants } from "~/components/ui/button"
 import {
     Card,
@@ -15,10 +15,28 @@ interface ProjectProps {
     projectName: string
     projectDescription: string
     technologiesUsed: Array<
-        "nextjs" | "react" | "typescript" | "tailwindcss" | "postgresql" | "go"
+        | "nextjs2"
+        | "reactjs"
+        | "typescript"
+        | "tailwindcss"
+        | "postgresql"
+        | "go"
+        | "shadcnui"
+        | "reactquery"
+        | "nodejs"
+        | "nextauth"
+        | "prisma"
+        | "stripe"
+        | "vitejs"
+        | "prettier"
+        | "resend"
+        | "drizzle"
+        | "javascript"
     >
-    isLive: "live" | "not-live"
+    isLive: "live" | "not-live" | "in-progress"
     url?: string
+    githubUrl?: string
+    previewImage?: string
 }
 const Project = ({
     projectName,
@@ -26,6 +44,8 @@ const Project = ({
     technologiesUsed,
     isLive,
     url,
+    githubUrl,
+    previewImage,
 }: ProjectProps) => {
     return (
         <Card className="border-blue-400 bg-stone-800 text-white">
@@ -38,12 +58,19 @@ const Project = ({
                                     <div className="size-2 rounded-full bg-green-300 ring-1 ring-black blur-[1px]" />
                                     <span>{"Live"}</span>
                                 </div>
-                            ) : (
+                            ) : null}
+                            {isLive === "not-live" ? (
                                 <div className="flex flex-col">
                                     <div className="size-2 rounded-full bg-red-300 ring-1 ring-black blur-[1px]" />
                                     <span>{"Not Live"}</span>
                                 </div>
-                            )}
+                            ) : null}
+                            {isLive === "in-progress" ? (
+                                <div className="flex flex-col">
+                                    <div className="size-2 rounded-full bg-yellow-300 ring-1 ring-black blur-[1px]" />
+                                    <span>{"In Progress"}</span>
+                                </div>
+                            ) : null}
                         </span>
                     </div>
 
@@ -75,7 +102,10 @@ const Project = ({
                                 }}
                             >
                                 <img
-                                    src="https://i.pinimg.com/564x/4c/95/69/4c9569ab2928e5ae400a6a34e7c537a0.jpg"
+                                    src={
+                                        previewImage ??
+                                        "/previews/no-preview.png"
+                                    }
                                     alt="Preview image of the website"
                                     className="size-96"
                                 />
@@ -91,14 +121,12 @@ const Project = ({
                                 Visit
                             </Link>
                         </div>
-                        <div className="size-10 rounded-full bg-white ring-2 ring-primary">
-                            <Link href={""}>
-                                <StackIcon
-                                    className="object-contain"
-                                    name="github"
-                                />
-                            </Link>
-                        </div>
+                        <Link href={githubUrl ?? ""}>
+                            <TechStackIcon
+                                techUsed="github"
+                                className="hover:brightness-125"
+                            />
+                        </Link>
                     </div>
                 </div>
 
@@ -119,7 +147,11 @@ const Project = ({
                             key={tech}
                             className="size-10 overflow-hidden rounded-full bg-zinc-700 ring-2 ring-primary"
                         >
-                            <StackIcon className="" key={index} name={tech} />
+                            <TechStackIcon
+                                className="hover:cursor-help hover:brightness-125"
+                                key={index}
+                                techUsed={tech}
+                            />
                         </div>
                     ))}
                 </div>
