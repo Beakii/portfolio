@@ -196,7 +196,7 @@ const HeroSection = ({ className }: { className?: string }) => {
                         </Link>
                         <Link
                             target="_blank"
-                            href="/james-Software-CV.pdf"
+                            href="/James-Software-CV.pdf"
                             className={cn(
                                 "text-zinc-400 hover:bg-stone-900 hover:text-white",
                                 buttonVariants({
