@@ -12,7 +12,7 @@ const ProjectSection = ({ className }: { className?: string }) => {
             )}
         >
             <InView
-                className="my-auto"
+                className="my-auto pt-[3.5rem] md:pt-0"
                 variants={{
                     hidden: {
                         opacity: 0,
@@ -29,7 +29,7 @@ const ProjectSection = ({ className }: { className?: string }) => {
                     },
                 }}
             >
-                <span className="mb-32 flex justify-center text-3xl">
+                <span className="mb-10 flex justify-center pt-10 text-xl md:mb-32 md:text-3xl">
                     {"My recent projects :)"}
                 </span>
                 <div className="grid grid-cols-1 place-items-center gap-16 md:grid-cols-2">

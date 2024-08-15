@@ -31,10 +31,10 @@ const TechStackIcon = ({
                 >
                     <img
                         src={`/techstack/${techUsed}.svg`}
-                        className={cn(
-                            "hover:cursor-help hover:brightness-125",
-                            className,
-                        )}
+                        className={cn("hover:brightness-125", className, {
+                            ["hover:cursor-help"]: !staticIcon,
+                            ["cursor-pointer"]: staticIcon,
+                        })}
                     />
                 </TooltipTrigger>
 

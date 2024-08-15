@@ -1,3 +1,4 @@
+import HorizontalRule from "~/components/HorizontalRule"
 import MaxWidthWrapper from "~/components/MaxWidthWrapper"
 import HeroSection from "~/components/pseudoPages/Landing/HeroSection"
 import ProjectSection from "~/components/pseudoPages/Projects/ProjectSection"

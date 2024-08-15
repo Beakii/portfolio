@@ -97,7 +97,7 @@ const HeroSection = ({ className }: { className?: string }) => {
                 className,
             )}
         >
-            <div className="relative my-auto">
+            <div className="relative my-auto pt-[3.5rem] md:pt-0">
                 <InView
                     variants={{
                         hidden: {
@@ -125,7 +125,7 @@ const HeroSection = ({ className }: { className?: string }) => {
                         as="h1"
                         per="char"
                         preset="fade"
-                        className="mt-10 text-center text-4xl font-semibold tracking-tight md:text-left md:text-5xl"
+                        className="mt-10 text-center text-2xl font-semibold tracking-tight md:text-left md:text-5xl"
                     >
                         {"Software Developer"}
                     </TextEffect>
@@ -134,7 +134,7 @@ const HeroSection = ({ className }: { className?: string }) => {
                         as="p"
                         per="word"
                         preset="slide"
-                        className="my-10 w-full text-center md:text-left lg:max-w-[50%]"
+                        className="my-10 w-full text-center text-xs md:text-left md:text-base lg:max-w-[50%]"
                     >
                         {
                             "I live in New Zealand and I've been working as a business consultant for more than 3 years. I have decided to focus my career efforts back towards my passion in Software Development. My experience may not be commercial, but please check out my self-driven learning and projects below. :)"
@@ -201,8 +201,6 @@ const HeroSection = ({ className }: { className?: string }) => {
                     </div>
                 </InView>
             </div>
-
-            <HorizontalRule chevronIcon="down" />
         </section>
     )
 }
