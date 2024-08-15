@@ -9,7 +9,7 @@ const HorizontalRule = ({ className, chevronIcon }: HorizontalRuleProps) => {
     return (
         <div
             className={cn(
-                "animate-fade flex h-10 cursor-pointer flex-col",
+                "hidden h-10 animate-fade cursor-pointer flex-col md:flex",
                 className,
             )}
         >

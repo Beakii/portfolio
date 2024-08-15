@@ -10,16 +10,29 @@ import { TECH_STACK } from "~/lib/types"
 interface TechStackIconProps {
     techUsed: TECH_STACK
     className?: string
+    staticIcon?: boolean
 }
-const TechStackIcon = ({ techUsed, className }: TechStackIconProps) => {
+const TechStackIcon = ({
+    techUsed,
+    className,
+    staticIcon,
+}: TechStackIconProps) => {
     return (
         <TooltipProvider>
             <Tooltip>
-                <TooltipTrigger>
+                <TooltipTrigger
+                    className={cn(
+                        "flex overflow-hidden rounded-full bg-zinc-700 ring-2 ring-primary md:size-10",
+                        {
+                            ["size-8"]: !staticIcon,
+                            ["size-10"]: staticIcon,
+                        },
+                    )}
+                >
                     <img
                         src={`/techstack/${techUsed}.svg`}
                         className={cn(
-                            "flex size-10 items-center justify-center rounded-full ring-2 ring-primary",
+                            "hover:cursor-help hover:brightness-125",
                             className,
                         )}
                     />

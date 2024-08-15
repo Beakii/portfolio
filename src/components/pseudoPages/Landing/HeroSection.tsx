@@ -116,7 +116,7 @@ const HeroSection = ({ className }: { className?: string }) => {
                     <TextEffect
                         per="char"
                         preset="scale"
-                        className="text-xl tracking-tight"
+                        className="pt-10 text-center text-xl tracking-tight md:pt-0 md:text-left"
                     >
                         {"Hello! I'm James :)"}
                     </TextEffect>
@@ -125,7 +125,7 @@ const HeroSection = ({ className }: { className?: string }) => {
                         as="h1"
                         per="char"
                         preset="fade"
-                        className="mt-10 text-4xl font-semibold tracking-tight md:text-5xl"
+                        className="mt-10 text-center text-4xl font-semibold tracking-tight md:text-left md:text-5xl"
                     >
                         {"Software Developer"}
                     </TextEffect>
@@ -134,7 +134,7 @@ const HeroSection = ({ className }: { className?: string }) => {
                         as="p"
                         per="word"
                         preset="slide"
-                        className="my-10 space-y-2 text-justify lg:max-w-[50%]"
+                        className="my-10 w-full text-center md:text-left lg:max-w-[50%]"
                     >
                         {
                             "I live in New Zealand and I've been working as a business consultant for more than 3 years. I have decided to focus my career efforts back towards my passion in Software Development. My experience may not be commercial, but please check out my self-driven learning and projects below. :)"
@@ -150,15 +150,8 @@ const HeroSection = ({ className }: { className?: string }) => {
                     </TextEffect>
                     <div className="grid w-full grid-cols-6 md:grid-cols-12">
                         {techStackArray.map((tech, index) => (
-                            <div
-                                key={tech}
-                                className="m-2 size-10 overflow-hidden rounded-full bg-zinc-700 ring-2 ring-primary"
-                            >
-                                <TechStackIcon
-                                    className="hover:cursor-help hover:brightness-125"
-                                    key={index}
-                                    techUsed={tech}
-                                />
+                            <div key={tech} className="m-2">
+                                <TechStackIcon key={index} techUsed={tech} />
                             </div>
                         ))}
                     </div>
@@ -197,12 +190,11 @@ const HeroSection = ({ className }: { className?: string }) => {
                         <Link
                             target="_blank"
                             href="/James-Software-CV.pdf"
-                            className={cn(
-                                "text-zinc-400 hover:bg-stone-900 hover:text-white",
-                                buttonVariants({
-                                    variant: "ghost",
-                                }),
-                            )}
+                            className={buttonVariants({
+                                variant: "ghost",
+                                className:
+                                    "text-zinc-400 hover:bg-blue-400 hover:text-white",
+                            })}
                         >
                             Download CV <DownloadIcon className="ml-2 size-5" />
                         </Link>

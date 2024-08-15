@@ -106,6 +106,7 @@ const Project = ({
                         </div>
                         <Link href={githubUrl ?? ""}>
                             <TechStackIcon
+                                staticIcon
                                 techUsed="github"
                                 className="hover:brightness-125"
                             />
@@ -116,7 +117,7 @@ const Project = ({
                 <CardTitle>
                     <span>{projectName}</span>
                 </CardTitle>
-                <CardDescription>
+                <CardDescription className="max-w-lg">
                     <span>{projectDescription}</span>
                 </CardDescription>
             </CardHeader>
@@ -124,18 +125,9 @@ const Project = ({
             <CardContent></CardContent>
 
             <CardFooter>
-                <div className="flex w-full justify-evenly">
+                <div className="grid w-full grid-cols-12 place-items-center gap-y-5 md:grid-cols-10">
                     {technologiesUsed.map((tech, index) => (
-                        <div
-                            key={tech}
-                            className="size-10 overflow-hidden rounded-full bg-zinc-700 ring-2 ring-primary"
-                        >
-                            <TechStackIcon
-                                className="hover:cursor-help hover:brightness-125"
-                                key={index}
-                                techUsed={tech}
-                            />
-                        </div>
+                        <TechStackIcon key={index} techUsed={tech} />
                     ))}
                 </div>
             </CardFooter>
