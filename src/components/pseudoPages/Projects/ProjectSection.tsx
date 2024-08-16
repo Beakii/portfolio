@@ -7,7 +7,7 @@ const ProjectSection = ({ className }: { className?: string }) => {
     return (
         <section
             className={cn(
-                "flex min-h-screen flex-col justify-evenly",
+                "flex min-h-screen flex-col justify-center",
                 className,
             )}
         >
@@ -90,8 +90,6 @@ const ProjectSection = ({ className }: { className?: string }) => {
                     />
                 </div>
             </InView>
-
-            <HorizontalRule chevronIcon="down" />
         </section>
     )
 }

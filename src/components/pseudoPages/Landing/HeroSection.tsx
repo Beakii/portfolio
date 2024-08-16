@@ -93,7 +93,7 @@ const HeroSection = ({ className }: { className?: string }) => {
     return (
         <section
             className={cn(
-                "flex min-h-screen flex-col justify-evenly",
+                "flex min-h-screen flex-col justify-center",
                 className,
             )}
         >
@@ -170,7 +170,12 @@ const HeroSection = ({ className }: { className?: string }) => {
                                 {Arrow}
                             </div>
                             <img
-                                className="absolute right-20 top-20 max-h-64 animate-fade"
+                                className="absolute right-20 top-20 z-10 max-h-64 animate-fade rounded-md"
+                                src="/twig.png"
+                                alt="My cat Twig"
+                            />
+                            <img
+                                className="absolute right-20 top-20 max-h-64 animate-fade blur-xl"
                                 src="/twig.png"
                                 alt="My cat Twig"
                             />
