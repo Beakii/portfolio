@@ -17,4 +17,5 @@ export type TECH_STACK =
 	| "drizzle"
 	| "javascript"
 	| "github"
+	| "python"
 

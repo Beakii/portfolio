@@ -74,7 +74,7 @@ const ProjectSection = ({ className }: { className?: string }) => {
                             "vitejs",
                             "reactjs",
                             "tailwindcss",
-                            "go",
+                            "python",
                             "postgresql",
                         ]}
                         isLive="in-progress"
@@ -84,7 +84,7 @@ const ProjectSection = ({ className }: { className?: string }) => {
                     />
                     <Project
                         projectName="BeakieBot - Deprecated"
-                        projectDescription="A twitch bot prototype. Currently being rewritten in React/Go."
+                        projectDescription="A twitch bot prototype. Currently being rewritten in React/Python."
                         technologiesUsed={["javascript", "nodejs"]}
                         isLive="not-live"
                     />

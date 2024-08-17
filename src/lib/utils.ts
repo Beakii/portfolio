@@ -21,19 +21,19 @@ export function techStackMapper(techUsed:TECH_STACK){
 		case "go":
 			return "Go"
 		case "shadcnui":
-			return "Shadcn UI"
+			return "shadcn-ui"
 		case "reactquery":
 			return "React Query"
 		case "nodejs":
 			return "Node.js"
 		case "nextauth":
-			return "NextAuth"
+			return "Next Auth"
 		case "prisma":
 			return "Prisma"
 		case "stripe":
 			return "Stripe"
 		case "vitejs":
-			return "Vite.js"
+			return "Vite"
 		case "prettier":
 			return "Prettier"
 		case "resend":
@@ -44,6 +44,8 @@ export function techStackMapper(techUsed:TECH_STACK){
 			return "JavaScript"
 		case "github":
 			return "GitHub"
+		case "python":
+			return "Python"
 		default:
 			return techUsed	
 	}
