@@ -18,4 +18,8 @@ export type TECH_STACK =
 	| "javascript"
 	| "github"
 	| "python"
+	| "cpp"
+	| "c"
+	| "csharp"
+	| "dx12"
 

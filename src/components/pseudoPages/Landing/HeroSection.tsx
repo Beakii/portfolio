@@ -1,7 +1,6 @@
 import { DownloadIcon } from "lucide-react"
-import { Button, buttonVariants } from "../../ui/button"
+import { buttonVariants } from "../../ui/button"
 import { TextEffect } from "../../ui/TextEffect"
-import HorizontalRule from "../../HorizontalRule"
 import { cn } from "~/lib/utils"
 import { InView } from "~/components/ui/InView"
 import TechStackIcon from "~/components/TechStackIcon"
@@ -73,20 +72,14 @@ const techStackArray: TECH_STACK[] = [
     "reactjs",
     "typescript",
     "javascript",
-    "python",
-    "go",
+    "cpp",
+    "csharp",
     "github",
     "tailwindcss",
     "postgresql",
-    "nodejs",
     "nextauth",
     "shadcnui",
     "prettier",
-    "reactquery",
-    "stripe",
-    "resend",
-    "prisma",
-    "drizzle",
 ]
 
 const HeroSection = ({ className }: { className?: string }) => {
@@ -162,9 +155,9 @@ const HeroSection = ({ className }: { className?: string }) => {
                                 as="p"
                                 per="word"
                                 preset="slide"
-                                className="absolute left-10 top-0"
+                                className="absolute left-16 top-0"
                             >
-                                {"My cat twig"}
+                                {"My cat"}
                             </TextEffect>
                             <div className="absolute left-10 top-10 -rotate-45 animate-fade">
                                 {Arrow}

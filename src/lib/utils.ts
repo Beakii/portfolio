@@ -46,6 +46,14 @@ export function techStackMapper(techUsed:TECH_STACK){
 			return "GitHub"
 		case "python":
 			return "Python"
+		case "cpp":
+			return "C++"
+		case "c":
+			return "C"
+		case "csharp":
+			return "C#"
+		case "dx12":
+			return "DirectX 12"
 		default:
 			return techUsed	
 	}

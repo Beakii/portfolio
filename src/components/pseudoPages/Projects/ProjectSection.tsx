@@ -68,25 +68,27 @@ const ProjectSection = ({ className }: { className?: string }) => {
                         githubUrl="https://github.com/Beakii/bdodle"
                     />
                     <Project
+                        projectName="Simple Game Engine"
+                        projectDescription="A simple game engine built in C/C++ and DirectX 12 to learn and explore how game engines work."
+                        technologiesUsed={["cpp", "dx12"]}
+                        isLive="in-progress"
+                        previewImage="/previews/no-preview.png"
+                        githubUrl="https://github.com/Beakii/cpp-gameengine-learning"
+                    />
+                    <Project
                         projectName="BeakieBot"
                         projectDescription="A twitch bot specifically for integrating with 7tv via channel point redeems."
                         technologiesUsed={[
                             "vitejs",
                             "reactjs",
                             "tailwindcss",
-                            "go",
+                            "csharp",
                             "postgresql",
                         ]}
                         isLive="in-progress"
                         url="https://beakiebot-client.vercel.app/"
                         previewImage="/previews/beakiebot-preview.png"
                         githubUrl="https://github.com/Beakii/beakiebot-client"
-                    />
-                    <Project
-                        projectName="BeakieBot - Deprecated"
-                        projectDescription="A twitch bot prototype. Currently being rewritten in React/Go."
-                        technologiesUsed={["javascript", "nodejs"]}
-                        isLive="not-live"
                     />
                 </div>
             </InView>
