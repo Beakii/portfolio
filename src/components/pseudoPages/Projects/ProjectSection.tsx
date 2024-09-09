@@ -81,6 +81,7 @@ const ProjectSection = ({ className }: { className?: string }) => {
                         technologiesUsed={[
                             "reactjs",
                             "tailwindcss",
+                            "typescript",
                             "csharp",
                             "mssql",
                         ]}
