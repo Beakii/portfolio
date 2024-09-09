@@ -54,6 +54,8 @@ export function techStackMapper(techUsed:TECH_STACK){
 			return "C#"
 		case "dx12":
 			return "DirectX 12"
+		case "mssql":
+			return "Microsoft SQL Server"
 		default:
 			return techUsed	
 	}

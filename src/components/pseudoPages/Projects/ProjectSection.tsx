@@ -79,11 +79,10 @@ const ProjectSection = ({ className }: { className?: string }) => {
                         projectName="BeakieBot"
                         projectDescription="A twitch bot specifically for integrating with 7tv via channel point redeems."
                         technologiesUsed={[
-                            "vitejs",
                             "reactjs",
                             "tailwindcss",
                             "csharp",
-                            "postgresql",
+                            "mssql",
                         ]}
                         isLive="in-progress"
                         url="https://beakiebot-client.vercel.app/"

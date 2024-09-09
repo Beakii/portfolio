@@ -22,4 +22,5 @@ export type TECH_STACK =
 	| "c"
 	| "csharp"
 	| "dx12"
+	| "mssql"
 
